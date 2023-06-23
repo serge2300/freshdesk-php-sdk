@@ -279,13 +279,13 @@ class Api
         try {
             switch ($method) {
                 case 'GET':
-                    return json_decode($this->client->get($url, $options)->getBody(), true);
+                    return json_decode($this->client->get($url, $options)->getBody());
                 case 'POST':
-                    return json_decode($this->client->post($url, $options)->getBody(), true);
+                    return json_decode($this->client->post($url, $options)->getBody());
                 case 'PUT':
-                    return json_decode($this->client->put($url, $options)->getBody(), true);
+                    return json_decode($this->client->put($url, $options)->getBody());
                 case 'DELETE':
-                    return json_decode($this->client->delete($url, $options)->getBody(), true);
+                    return json_decode($this->client->delete($url, $options)->getBody());
                 default:
                     return null;
             }
